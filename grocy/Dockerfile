@@ -32,10 +32,11 @@ RUN \
     \
     && yarn global add modclean \
     \
-    && git clone --branch "v3.0.1" --depth=1 \
+    && git clone \
         https://github.com/grocy/grocy.git /var/www/grocy \
     \
     && cd /var/www/grocy \
+    && git checkout 5ecd3a585ecc34828a793bf49e2cf873bc58ddf6 \
     \
     && composer install --no-dev \
     && yarn --production \
